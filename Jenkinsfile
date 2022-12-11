@@ -5,7 +5,9 @@ pipeline {
    
     stages {
         stage('Build') {
-            echo "NodeJS application build is success"
+             steps {
+                echo "NodeJS application build is success"
+           }
         }
     }
 
