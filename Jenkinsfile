@@ -1,17 +1,15 @@
 #!/usr/bin/env groovy
 
 pipeline {
-    agent {
-        docker {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
-        }
+    agent any
+    tools {
+        nodejs 'NodeJS 19.2.0'
     }
     stages {
         stage('Build') {
             steps {
                 echo 'in Build stage ---->'
-                //sh 'nodejs --version'
+                sh 'nodejs --version'
                 sh 'npm install'
                 sh 'gulp lint'
             }
@@ -19,7 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'in Build stage ---->'
-                 //sh 'nodejs --version'
+                 sh 'nodejs --version'
                 sh 'gulp test'
             }
         }
