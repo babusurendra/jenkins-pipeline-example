@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'in Build stage ---->'
-                sh 'node --version'
+                //sh 'node --version'
                 sh 'npm install'
                 sh 'gulp lint'
             }
@@ -17,7 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'in Build stage ---->'
-                 sh 'node --version'
+                 //sh 'node --version'
                 sh 'gulp test'
             }
         }
