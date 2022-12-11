@@ -2,22 +2,16 @@
 
 pipeline {
     agent any
-    tools {
-        nodejs 'node-8.1.3'
-    }
+    
     stages {
         stage('Build') {
             steps {
                 echo 'in Build stage ---->'
-                sh 'nodejs --version'
-                sh 'npm install'
-                sh 'gulp lint'
             }
         }
         stage('Test') {
             steps {
-                sh 'nodejs --version'
-                sh 'gulp test'
+                 echo 'in test stage ---->'
             }
         }
     }
