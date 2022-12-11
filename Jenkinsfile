@@ -14,6 +14,11 @@ pipeline {
                  echo 'in test stage ---->'
             }
         }
+        stage('Production') {
+            steps {
+                 echo 'in production stage ---->'
+            }
+        }
     }
     post {
         always {
