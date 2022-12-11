@@ -17,7 +17,7 @@ app.get('/api/getFunFact/', (req, res) => {
     console.log(err);
   });
 });
-
+// start server
 const server = app.listen(port, () => {
   console.log(`listening on port ${ port }`);
 });
